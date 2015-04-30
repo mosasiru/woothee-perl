@@ -34,6 +34,10 @@ sub challenge_google {
             return 1;
         }
     }
+    if (index($ua, "Google-Site-Verification") > -1) {
+        update_map($result, dataset("GoogleSiteVerification"));
+        return 1;
+    }
     if (index($ua, "Feedfetcher-Google;") > -1) {
         update_map($result, dataset("GoogleFeedFetcher"));
         return 1;

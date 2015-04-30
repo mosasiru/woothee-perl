@@ -43,6 +43,11 @@
   os: UNKNOWN
   category: crawler
 
+- target: 'Mozilla/5.0 (compatible; Google-Site-Verification/1.0)'
+  name: Google Site Verification
+  os: UNKNOWN
+  category: crawler
+
 - target: 'FeedBurner/1.0 (http://www.FeedBurner.com)'
   name: Google FeedBurner
   os: UNKNOWN
