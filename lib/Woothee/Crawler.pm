@@ -86,6 +86,18 @@ sub challenge_crawlers {
         update_map($result, dataset("msnbot"));
         return 1;
     }
+    elsif (index($ua, "backend\@getprismatic.com") > -1) {
+        update_map($result, dataset("Prismatic"));
+        return 1;
+    }
+    elsif (index($ua, "iCoreService ") > -1) {
+        update_map($result, dataset("iCoreService"));
+        return 1;
+    }
+    elsif (index($ua, "TweetmemeBot") > -1) {
+        update_map($result, dataset("TweetmemeBot"));
+        return 1;
+    }
     elsif (index($ua, "bingbot") > -1) {
         if (index($ua, "compatible; bingbot") > -1) {
             update_map($result, dataset("bingbot"));
@@ -154,11 +166,20 @@ sub challenge_crawlers {
         update_map($result, dataset("livedoorFeedFetcher"));
         return 1;
     }
-    elsif (index($ua, "Hatena ") > -1) {
-        if (index($ua, "Hatena Antenna") > -1 || index($ua, "Hatena Pagetitle Agent") > -1 || index($ua, "Hatena Diary RSS") > -1) {
+    elsif (index($ua, "Hatena") > -1) {
+        if (   index($ua, "Hatena Antenna") > -1
+            || index($ua, "Hatena Pagetitle Agent") > -1
+            || index($ua, "Hatena Diary RSS") > -1
+            || index($ua, "Bookmark") > -1
+            || index($ua, "Hatena Star UserAgent") > -1
+        ) {
             update_map($result, dataset("Hatena"));
             return 1;
         }
+    }
+    elsif (index($ua, "LINE PagePoker") > -1) {
+            update_map($result, dataset("LINE"));
+            return 1;
     }
     elsif (index($ua, "mixi-check") > -1 || index($ua, "mixi-crawler") > -1 || index($ua, "mixi-news-crawler") > -1) {
         update_map($result, dataset("mixi"));
@@ -182,7 +203,7 @@ sub challenge_maybe_crawler {
         update_map($result, dataset("VariousCrawler"));
         return 1;
     }
-    if ($ua =~ m{^(?:Rome Client |UnwindFetchor/|ia_archiver |Summify |PostRank/)}o
+    if ($ua =~ m{^(?:Rome Client |UnwindFetchor/|ia_archiver |Summify |PostRank|WWW::Document|GetURLInfo/|InAGist URL Resolver )}o
             or index($ua, "ASP-Ranker Feed Crawler") > -1) {
         update_map($result, dataset("VariousCrawler"));
         return 1;

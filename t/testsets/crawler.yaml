@@ -170,6 +170,27 @@
   os: UNKNOWN
   category: crawler
 
+- target: 'HatenaBookmark/0.03 (Hatena::Bookmark; master;) Furl/3.01'
+  name: Hatena
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Hatena::Bookmark/2.00'
+  name: Hatena
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Hatena Star UserAgent/2'
+  name: Hatena
+  os: UNKNOWN
+  category: crawler
+
+# LINE
+- target: 'Mozilla/5.0 (Linux) LINE PagePoker'
+  name: LINE
+  os: UNKNOWN
+  category: crawler
+
 # Goo
 - target: 'ichiro/3.0 (http://help.goo.ne.jp/door/crawler.html)'
   name: goo
@@ -203,6 +224,7 @@
   os: UNKNOWN
   category: crawler
 
+
 # facebook
 - target: 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)'
   name: facebook
@@ -222,5 +244,28 @@
 
 - target: 'mixi-crawler/2.00 (http://mixi.jp/)'
   name: mixi
+  os: UNKNOWN
+  category: crawler
+
+# Prismatic
+- target: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_6) AppleWebKit/534.24 (KHTML, like Gecko) (Contact: backend@getprismatic.com)'
+  name: Prismatic
+  os: UNKNOWN
+  category: crawler
+
+# iCoreService
+- target: 'iCoreService (unknown version) CFNetwork/720.3.13 Darwin/14.3.0 (x86_64)'
+  name: iCoreService
+  os: UNKNOWN
+  category: crawler
+
+# Tweetmeme
+- target: 'Mozilla/5.0 (compatible; TweetmemeBot/2.11; +http://tweetmeme.com/)'
+  name: TweetmemeBot
+  os: UNKNOWN
+  category: crawler
+
+- target: 'Mozilla/5.0 (TweetmemeBot/4.0; +http://datasift.com/bot.html) Gecko/20100101 Firefox/31.0'
+  name: TweetmemeBot
   os: UNKNOWN
   category: crawler

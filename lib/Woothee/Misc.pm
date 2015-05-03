@@ -49,13 +49,17 @@ sub challenge_http_library {
     my $data;
     my $version;
 
-    if ($ua =~ m{^(?:Apache-HttpClient/|Jakarta Commons-HttpClient/|Java/)}o || $ua =~ m{[- ]HttpClient(/|$)}o) {
+    if ($ua =~ m{^(?:Apache-HttpClient/|Jakarta Commons-HttpClient/|Google-HTTP-Java-Client/|Java/)}o || $ua =~ m{[- ]HttpClient(/|$)}o) {
         $data = dataset("HTTPLibrary");
         $version = "Java";
     }
     elsif (index($ua, "Java(TM) 2 Runtime Environment,") > -1) {
         $data = dataset("HTTPLibrary");
         $version = "Java";
+    }
+    elsif ($ua =~ m{^Go }o) {
+        $data = dataset("HTTPLibrary");
+        $version = "Go";
     }
     elsif ($ua =~ m{^Wget/}o) {
         $data = dataset("HTTPLibrary");
@@ -79,6 +83,10 @@ sub challenge_http_library {
         $data = dataset("HTTPLibrary");
         $version = "php";
     }
+    elsif ($ua =~ m{^iCoreService /}o) {
+        $data = dataset("HTTPLibrary");
+        $version = "cocoa";
+    }
 
     return 0 unless $data;
 
@@ -96,6 +104,9 @@ sub challenge_maybe_rss_reader {
         $data = dataset("VariousRSSReader");
     }
     elsif (index($ua, "cococ/") > -1) {
+        $data = dataset("VariousRSSReader");
+    }
+    elsif (index($ua, "Plagger/") > -1) {
         $data = dataset("VariousRSSReader");
     }
 
