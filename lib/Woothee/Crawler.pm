@@ -98,10 +98,6 @@ sub challenge_crawlers {
         update_map($result, dataset("TweetmemeBot"));
         return 1;
     }
-    elsif (index($ua, "ltx71") > -1) {
-        update_map($result, dataset("ltx71"));
-        return 1;
-    }
     elsif (index($ua, "bingbot") > -1) {
         if (index($ua, "compatible; bingbot") > -1) {
             update_map($result, dataset("bingbot"));
@@ -207,7 +203,7 @@ sub challenge_maybe_crawler {
         update_map($result, dataset("VariousCrawler"));
         return 1;
     }
-    if ($ua =~ m{^(?:Rome Client |UnwindFetchor/|ia_archiver |Summify |PostRank|WWW::Document|GetURLInfo/|InAGist URL Resolver )}o
+    if ($ua =~ m{^(?:Rome Client |UnwindFetchor/|ia_archiver |Summify |PostRank|WWW::Document|GetURLInfo/|InAGist URL Resolver |ltx71 |MetaURI )}o
             or index($ua, "ASP-Ranker Feed Crawler") > -1) {
         update_map($result, dataset("VariousCrawler"));
         return 1;

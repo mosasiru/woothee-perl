@@ -269,9 +269,3 @@
   name: TweetmemeBot
   os: UNKNOWN
   category: crawler
-
-# ltx71
-- target: 'ltx71 - (http://ltx71.com/)'
-  name: ltx71
-  os: UNKNOWN
-  category: crawler

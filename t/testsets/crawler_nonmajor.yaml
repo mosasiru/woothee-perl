@@ -103,6 +103,17 @@
   os: UNKNOWN
   category: crawler
 
+- target: 'ltx71 - (http://ltx71.com/)'
+  name: misc crawler
+  os: UNKNOWN
+  category: crawler
+
+- target: 'MetaURI API/2.0 +metauri.com'
+  name: misc crawler
+  os: UNKNOWN
+  category: crawler
+
+
 
 
 
