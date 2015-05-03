@@ -79,6 +79,11 @@
   os: UNKNOWN
   category: misc
 
+- target: 'okhttp/2.2.0'
+  name: HTTP Library
+  version: Java
+  category: misc
+
 - target: 'IE6.0,Java(TM) 2 Runtime Environment, Standard Edition'
   name: HTTP Library
   version: Java

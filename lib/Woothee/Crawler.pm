@@ -98,6 +98,10 @@ sub challenge_crawlers {
         update_map($result, dataset("TweetmemeBot"));
         return 1;
     }
+    elsif (index($ua, "ltx71") > -1) {
+        update_map($result, dataset("ltx71"));
+        return 1;
+    }
     elsif (index($ua, "bingbot") > -1) {
         if (index($ua, "compatible; bingbot") > -1) {
             update_map($result, dataset("bingbot"));

@@ -57,6 +57,10 @@ sub challenge_http_library {
         $data = dataset("HTTPLibrary");
         $version = "Java";
     }
+    elsif (index($ua, "okhttp/") > -1) {
+        $data = dataset("HTTPLibrary");
+        $version = "Java";
+    }
     elsif ($ua =~ m{^Go }o) {
         $data = dataset("HTTPLibrary");
         $version = "Go";
