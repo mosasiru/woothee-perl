@@ -43,6 +43,11 @@
   os: UNKNOWN
   category: misc
 
+- target: 'Plagger/0.7.17 (http://plagger.org/)'
+  name: RSSReader
+  os: UNKNOWN
+  category: misc
+
 # http libraries
 - target: 'Wget/1.12 (linux-gnu)'
   name: HTTP Library
@@ -77,6 +82,18 @@
 - target: 'IE6.0,Java(TM) 2 Runtime Environment, Standard Edition'
   name: HTTP Library
   version: Java
+  os: UNKNOWN
+  category: misc
+
+- target: 'Google-HTTP-Java-Client/1.17.0-rc (gzip)'
+  name: HTTP Library
+  version: Java
+  os: UNKNOWN
+  category: misc
+
+- target: 'Go 1.1 package http'
+  name: HTTP Library
+  version: Go
   os: UNKNOWN
   category: misc
 
